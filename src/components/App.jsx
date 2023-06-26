@@ -14,7 +14,10 @@ export const App = () => {
   const handleIncrement = e => {
     const { name } = e.target;
 
-    setFeedback(prevState => ({ ...prevState, [name]: prevState[name] + 1 }));
+    setFeedback(prevState => ({
+      ...prevState,
+      [name]: prevState[name] + 1,
+    }));
   };
 
   const countTotalFeedback = () => {
@@ -25,7 +28,7 @@ export const App = () => {
   const countPositiveFeedbackPercentage = () => {
     const total = countTotalFeedback();
     return feedback.good > 0
-      ? Math.round((this.state.good / total) * 100) + '%'
+      ? Math.round((feedback.good / total) * 100) + '%'
       : 'There is no positive feedback yet';
   };
 
@@ -37,7 +40,7 @@ export const App = () => {
     <>
       <Section title="Please leave feedback">
         <FeedbackOptions
-          options={Object.keys(this.state)}
+          options={Object.keys(feedback)}
           onLeaveFeedback={handleIncrement}
         />
       </Section>
