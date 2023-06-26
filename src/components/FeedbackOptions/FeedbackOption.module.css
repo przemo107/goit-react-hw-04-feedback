@@ -1,0 +1,22 @@
+body {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #51ff00;
+  border: 1px solid #0a4701;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 10px;
+  font-weight: 600;
+}

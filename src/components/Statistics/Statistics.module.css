@@ -1,0 +1,11 @@
+.statlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stat {
+  font-size: 20px;
+  color: darkblue;
+  font-weight: 500;
+}
